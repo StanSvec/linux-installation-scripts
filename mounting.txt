@@ -1,0 +1,6 @@
+mkdir Installation; sudo mount -t vboxsf Installation ~/Installation
+
+install makemkv
+cd /usr/lib
+sudo ln -s libmmbd.so.0 libaacs.so.0
+sudo ln -s libmmbd.so.0 libbdplus.so.0

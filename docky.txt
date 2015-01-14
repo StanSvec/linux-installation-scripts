@@ -1,0 +1,4 @@
+Theme: Classic
+Icon Size: 44
+Zoom: 140
+3D Background: On
