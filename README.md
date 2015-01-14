@@ -36,6 +36,10 @@ Installing the newest version of **Docker** (*You must re-log the user after the
 ```bash
 sudo ./docker.sh $USERNAME
 ```
+Changing path for the root of the Docker runtime (*The default location is /var/lib/docker. Docker images are contained in this directory. Changing of the path can be convinient for example in case you don't have enough space on /var partition.*)
+```bash
+sudo ./docker-change-graph-path.sh $NEW_PATH
+```
 Installing **Fig**
 ```bash
 mkdir files/fig
