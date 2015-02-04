@@ -31,7 +31,7 @@ sudo ./deadbeef.sh
 ```
 To activate file browser: View -> Design mode, Replace with.. -> Splitter (left and right), Insert... -> ...
 ***
-Installing XnViewMP
+Installing **XnViewMP**
 ```bash
 sudo ./xnviewmp.sh
 ```
@@ -54,11 +54,11 @@ Changing path for the root of the Docker runtime
 sudo ./docker-change-graph-path.sh $NEW_PATH
 ```
 ***
-Installing **Fig**
+Installing **Docker Compose** (formerly named Fig)
 ```bash
 mkdir files/fig
-wget https://github.com/docker/fig/releases/download/1.0.1/fig-Linux-x86_64 -O ./files/fig/fig
-sudo ./fig.sh
+wget https://github.com/docker/fig/releases/download/1.1.0-rc2/docker-compose-`uname -s`-`uname -m` -O ./files/fig/docker-compose
+sudo ./docker-compose.sh
 ```
 ***
 Installing **IntelliJ IDEA Community Edition** and integrating with desktop (adding desktop menu item...)
