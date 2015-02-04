@@ -31,6 +31,11 @@ sudo ./deadbeef.sh
 ```
 To activate file browser: View -> Design mode, Replace with.. -> Splitter (left and right), Insert... -> ...
 ***
+Installing XnViewMP
+```bash
+sudo ./xnviewmp.sh
+```
+***
 Installing **Oracle JDK 8** and setting the environment variables for installed JDK
 ```bash
 sudo ./oracle-java.sh
