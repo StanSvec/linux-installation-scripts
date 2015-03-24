@@ -61,11 +61,11 @@ wget https://github.com/docker/fig/releases/download/1.1.0-rc2/docker-compose-`u
 sudo ./docker-compose.sh
 ```
 ***
-Installing **IntelliJ IDEA Community Edition** and integrating with desktop (adding desktop menu item...)
+Installing/Updating **IntelliJ IDEA Community Edition** and integrating with desktop (adding desktop menu item...)
 
 Before running the script:
 
-* Download archive as ideaIC.tar.gz into files/idea directory
+* Download IDEA archive as ideaIC.tar.gz into files/idea directory
 
 ```bash
 sudo ./idea.sh
