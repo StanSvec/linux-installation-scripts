@@ -36,6 +36,11 @@ Installing **XnViewMP**
 sudo ./xnviewmp.sh
 ```
 ***
+Installing **KeePass2**
+```bash
+sudo ./keepass2.sh
+```
+***
 Installing **Oracle JDK 8** and setting the environment variables for installed JDK
 ```bash
 sudo ./oracle-java.sh
