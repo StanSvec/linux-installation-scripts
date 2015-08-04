@@ -36,7 +36,7 @@ Installing **XnViewMP**
 sudo ./xnviewmp.sh
 ```
 ***
-Installing **KeePass2**
+Installing **KeePass2** (with xsel for proper copy/paste working)
 ```bash
 sudo ./keepass2.sh
 ```
