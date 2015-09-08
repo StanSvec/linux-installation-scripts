@@ -75,3 +75,13 @@ Before running the script:
 ```bash
 sudo ./idea.sh
 ```
+***
+Installing/Updating **0xDBE EAP** and integrating with desktop (adding desktop menu item...)
+
+Before running the script:
+
+* Download 0xDBE archive as 0xdbe.tar.gz into files/0xdbe directory
+
+```bash
+sudo ./0xdbe.sh
+```
