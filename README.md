@@ -2,7 +2,7 @@ Installation Scripts for Debian
 --------------
 Run the commands from the *Debian* directory (not required for all the commands).
 ***
-Install **Numix Icons** theme
+Install **Numix Icons**
 ```bash
 sudo ./numix-icons
 ```
