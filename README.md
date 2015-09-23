@@ -26,16 +26,21 @@ Before running the script:
 * Download IDEA archive as ideaIC.tar.gz into files/idea directory
 
 ```bash
-sudo ./idea.sh
+sudo ./idea
 ```
 ***
 Install **Docker** and add user to docker group
 
 (*The user must re-log after the execution. The specified user doesn't have to use sudo for Docker commands.*)
 ```bash
-sudo ./docker.sh $USERNAME
+sudo ./docker $USERNAME
 ```
+Change path for the root of the Docker runtime
 
+(*The default location is /var/lib/docker. Docker images are contained in this directory. Changing of the path can be convinient for example in case you don't have enough space on /var partition.*)
+```bash
+sudo ./docker-change-graph-path $NEW_PATH
+```
 Installation Scripts for Linux Mint
 --------------
 Run the commands from the *Mint* directory (not required for all the commands).
