@@ -1,6 +1,6 @@
 Installation Scripts for Debian
 --------------
-Run the commands from the *Installation/Debian* directory (not required for all the commands).
+Run the commands from the *Debian* directory (not required for all the commands).
 ***
 Install **Numix Icons** theme
 ```bash
@@ -14,10 +14,31 @@ sudo ./elegance-colors
 ```
 Prerequisite: Git is installed
 ***
+Install **Oracle JDK 8**
+```bash
+sudo ./oracle-java
+```
+***
+Install/Update **IntelliJ IDEA Community Edition** and integrate with desktop (adding desktop menu item...)
+
+Before running the script:
+
+* Download IDEA archive as ideaIC.tar.gz into files/idea directory
+
+```bash
+sudo ./idea.sh
+```
+***
+Install **Docker** and add user to docker group
+
+(*The user must re-log after the execution. The specified user doesn't have to use sudo for Docker commands.*)
+```bash
+sudo ./docker.sh $USERNAME
+```
+
 Installation Scripts for Linux Mint
 --------------
-
-Clone the repo into directory *~/Installation*. Run the commands from the *Installation* directory (not required for all the commands).
+Run the commands from the *Mint* directory (not required for all the commands).
 ***
 Installing the **Numix GTK** theme
 ```bash

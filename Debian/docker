@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ $# -eq 0 ]; then
+  echo "you must specify the user"
+  exit
+fi 
+apt-get update
+apt-get install docker.io
+gpasswd -a $1 docker
+echo "******** re-login user ********"
