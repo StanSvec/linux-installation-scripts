@@ -1,4 +1,20 @@
-The Application Installation Scripts for Linux Mint 17.1
+Installation Scripts for Debian
+--------------
+Run the commands from the *Installation/Debian* directory (not required for all the commands).
+***
+Install **Numix Icons** theme
+```bash
+sudo ./numix-icons
+```
+Prerequisite: Git is installed
+***
+Install **Elegance Colors** Gnome Shell theme
+```bash
+sudo ./elegance-colors
+```
+Prerequisite: Git is installed
+***
+Installation Scripts for Linux Mint
 --------------
 
 Clone the repo into directory *~/Installation*. Run the commands from the *Installation* directory (not required for all the commands).

@@ -1,0 +1,4 @@
+git clone https://github.com/numixproject/numix-icon-theme-circle.git
+mv numix-icon-theme-circle/Numix-Circle /usr/share/icons
+mv numix-icon-theme-circle/Numix-Circle-Light /usr/share/icons
+rm numix-icon-theme-circle -rf
