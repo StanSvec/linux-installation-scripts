@@ -2,6 +2,11 @@ Installation Scripts for Debian
 --------------
 Run the commands from the *Debian* directory (not required for all the commands).
 ***
+Display date in Gnome Shell panel
+```
+gsettings set org.gnome.desktop.interface clock-show-date true
+```
+***
 Install **Numix Icons**
 ```bash
 sudo ./numix-icons
@@ -13,6 +18,16 @@ Install **Elegance Colors** Gnome Shell theme
 sudo ./elegance-colors
 ```
 Prerequisite: Git is installed
+***
+Install **Conky** and **Conky Manager**
+```bash
+sudo ./conky-with-manager
+```
+***
+Install **Skype** on Debian 8
+```bash
+sudo ./skype
+```
 ***
 Install **Oracle JDK 8**
 ```bash
