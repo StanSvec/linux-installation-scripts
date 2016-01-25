@@ -1,0 +1,3 @@
+#!/bin/bash
+FILES=files
+cp FILES/wifi/iwlwifi-*.ucode /lib/firmware
