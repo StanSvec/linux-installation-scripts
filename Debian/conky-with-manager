@@ -1,3 +1,4 @@
+#!/bin/bash
 apt-get install conky-all
 echo "deb http://ppa.launchpad.net/teejee2008/ppa/ubuntu utopic main" | tee /etc/apt/sources.list.d/teejee2008-ppa-utopic.list
 apt-get update

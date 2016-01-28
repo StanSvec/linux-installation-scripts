@@ -1,0 +1,12 @@
+#!/bin/bash
+
+FILE=sublime-text-3.tar.bz2
+FILES=files
+
+wget -O $FILE https://download.sublimetext.com/sublime_text_3_build_3083_x64.tar.bz2
+tar -xjvf $FILE
+rm -rf /opt/sublime_text_3
+mv sublime_text_3 /opt/
+ln -sf /opt/sublime_text_3/sublime_text /bin/subl
+cp -u -p $FILES/sublime/SublimeText.desktop /usr/share/applications
+rm $FILE

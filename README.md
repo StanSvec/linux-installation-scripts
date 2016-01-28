@@ -56,6 +56,12 @@ Change path for the root of the Docker runtime
 ```bash
 sudo ./docker-change-graph-path $NEW_PATH
 ```
+***
+Install Sublime Text 3
+```bash
+sudo ./sublime-text-3
+```
+
 Installation Scripts for Linux Mint
 --------------
 Run the commands from the *Mint* directory (not required for all the commands).
