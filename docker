@@ -2,8 +2,34 @@
 if [ $# -eq 0 ]; then
   echo "you must specify the user"
   exit
-fi 
+fi
+
+PROMPT_MSG="Press any enter to continue or Ctrl+C to terminate "
+
+printf "Adding new PGP key..\n"
+read -p "$PROMPT_MSG"
 apt-get update
-apt-get install docker.io
+apt-get install apt-transport-https ca-certificates
+apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+
+printf "Setting sources file..\n"
+read -p "$PROMPT_MSG"
+SOURCE_FILE=/etc/apt/sources.list.d/docker.list
+if [ -e $SOURCE_FILE ]; then
+  echo Removing old sources file..
+  rm $SOURCE_FILE
+fi
+echo 'deb https://apt.dockerproject.org/repo debian-stretch main' > $SOURCE_FILE
+
+printf "Installing docker..\n"
+read -p "$PROMPT_MSG"
+apt-get update
+apt-cache policy docker-engine
+apt-get install docker-engine
+
+printf "Adding user $1 to docker group..\n"
+read -p "$PROMPT_MSG"
 gpasswd -a $1 docker
-echo "******** re-login user ********"
+service docker restart
+docker run hello-world
+echo "******** Done - re-log the user $1! ********"
