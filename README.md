@@ -33,7 +33,22 @@ sudo ./conky-with-manager
 ## Development tools
 ### Git
 ```
-# sudo apt-get install git
+# apt-get install git
+```
+### Docker (Stretch/Sid versions only)
+(*The user must re-log after the execution. The specified user doesn't have to use sudo for Docker commands.*)
+```bash
+sudo ./docker $USERNAME
+```
+Change path for the root of the Docker runtime
+
+(*The default location is /var/lib/docker. Docker images are contained in this directory. Changing of the path can be convinient for example in case you don't have enough space on /var partition.*)
+```bash
+sudo ./docker-change-graph-path $NEW_PATH
+```
+### **Oracle JDK 8**
+```
+# ./oracle-java
 ```
 ### IntelliJ IDEA
 Install or update IDEA and integrate with desktop (adding desktop menu item...).
@@ -43,7 +58,7 @@ Prerequisite:
 * Download IDEA archive as ideaIC.tar.gz into files/idea directory
 
 ```bash
-sudo ./idea
+# ./idea
 ```
 
 Install **Skype** on Debian 8
