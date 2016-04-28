@@ -1,12 +1,19 @@
-Installation Scripts for Debian
---------------
-Run the commands from the *Debian* directory (not required for all the commands).
-***
-Display date in Gnome Shell panel
+# Debian Setup
+### Install sudo
 ```
-gsettings set org.gnome.desktop.interface clock-show-date true
+$ su
+# apt install sudo
+# adduser $YOUR_USER sudo
 ```
+Log out and log in
+
+**Note: Run the scripts from the repository directory (not required for all scripts).**
 ***
+## Gnome customization
+### Display date in Gnome Shell panel
+```
+$ gsettings set org.gnome.desktop.interface clock-show-date true
+```
 Install **Numix Icons**
 ```bash
 sudo ./numix-icons
@@ -23,7 +30,22 @@ Install **Conky** and **Conky Manager**
 ```bash
 sudo ./conky-with-manager
 ```
-***
+## Development tools
+### Git
+```
+# sudo apt-get install git
+```
+### IntelliJ IDEA
+Install or update IDEA and integrate with desktop (adding desktop menu item...).
+
+Prerequisite:
+
+* Download IDEA archive as ideaIC.tar.gz into files/idea directory
+
+```bash
+sudo ./idea
+```
+
 Install **Skype** on Debian 8
 ```bash
 sudo ./skype

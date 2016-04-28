@@ -1,7 +1,7 @@
 #!/bin/bash
 FILES=files
 rm -rf /opt/DataGrip
-tar -xvf $FILES/0xdbe/0xdbe.tar.gz -C /opt
+tar -xvf $FILES/datagrip/datagrip.tar.gz -C /opt
 mv /opt/DataGrip-* /opt/DataGrip
 ln -sf /opt/DataGrip/bin/datagrip.sh /usr/bin/datagrip.sh
-cp -u -p $FILES/0xdbe/DataGrip.desktop /usr/share/applications
+cp -u -p $FILES/datagrip/DataGrip.desktop /usr/share/applications
