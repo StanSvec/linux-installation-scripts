@@ -1,4 +1,5 @@
 # Debian Setup
+Tested on Debian 8 Stretch (testing)
 ### Install sudo
 ```
 $ su
@@ -6,29 +7,27 @@ $ su
 # adduser $YOUR_USER sudo
 ```
 Log out and log in
-
-**Note: Run the scripts from the repository directory (not required for all scripts).**
 ***
+**Note: The scripts must be run from the root repository directory (not required for all scripts).**
 ## Gnome customization
 ### Display date in Gnome Shell panel
 ```
 $ gsettings set org.gnome.desktop.interface clock-show-date true
 ```
-Install **Numix Icons**
-```bash
-sudo ./numix-icons
-```
+### Numix Icons
 Prerequisite: Git is installed
-***
-Install **Elegance Colors** Gnome Shell theme
-```bash
-sudo ./elegance-colors
 ```
-Prerequisite: Git is installed
-***
-Install **Conky** and **Conky Manager**
-```bash
-sudo ./conky-with-manager
+# ./numix-icons
+```
+### Arc Theme
+[Git repo](https://github.com/horst3180/arc-theme)
+```
+sudo apt-get install autoconf; sudo apt-get install pkg-config; sudo apt-get install make; sudo apt-get install libgtk-3-dev; git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme; ./autogen.sh --prefix=/usr; sudo make install; cd..; rm -rf arc-theme
+```
+### Adapta Theme
+[Git repo](https://github.com/tista500/Adapta)
+```
+sudo apt-get install autoconf; sudo apt-get install pkg-config; sudo apt-get install make; git clone https://github.com/tista500/Adapta.git; cd Adapta; ./autogen.sh; make; sudo make install; cd ..; rm -rf Adapta
 ```
 ## Development tools
 ### Git
@@ -40,10 +39,9 @@ sudo ./conky-with-manager
 ```bash
 sudo ./docker $USERNAME
 ```
-Change path for the root of the Docker runtime
-
-(*The default location is /var/lib/docker. Docker images are contained in this directory. Changing of the path can be convinient for example in case you don't have enough space on /var partition.*)
-```bash
+#### Changing root path for the Docker runtime (needs review!)
+The default location is `/var/lib/docker`. Docker images are downloaded to this directory. Changing of the path can be convinient for example in case you don't have enough space on /var partition.
+```
 sudo ./docker-change-graph-path $NEW_PATH
 ```
 ### **Oracle JDK 8**
@@ -53,135 +51,39 @@ sudo ./docker-change-graph-path $NEW_PATH
 ### IntelliJ IDEA
 Install or update IDEA and integrate with desktop (adding desktop menu item...).
 
-Prerequisite:
-
-* Download IDEA archive as ideaIC.tar.gz into files/idea directory
-
-```bash
+Prerequisite: Download IDEA archive as `ideaIC.tar.gz` into `files/idea` directory
+```
 # ./idea
 ```
-
-Install **Skype** on Debian 8
-```bash
-sudo ./skype
-```
-***
-Install **Oracle JDK 8**
-```bash
-sudo ./oracle-java
-```
-***
-Install/Update **IntelliJ IDEA Community Edition** and integrate with desktop (adding desktop menu item...)
-
-Before running the script:
-
-* Download IDEA archive as ideaIC.tar.gz into files/idea directory
-
-```bash
-sudo ./idea
-```
-***
-Install **Docker** and add user to docker group
-
-(*The user must re-log after the execution. The specified user doesn't have to use sudo for Docker commands.*)
-```bash
-sudo ./docker $USERNAME
-```
-Change path for the root of the Docker runtime
-
-(*The default location is /var/lib/docker. Docker images are contained in this directory. Changing of the path can be convinient for example in case you don't have enough space on /var partition.*)
-```bash
-sudo ./docker-change-graph-path $NEW_PATH
-```
-***
 Install Sublime Text 3
 ```bash
 sudo ./sublime-text-3
 ```
-
-Installation Scripts for Linux Mint
---------------
-Run the commands from the *Mint* directory (not required for all the commands).
-***
-Installing the **Numix GTK** theme
-```bash
-sudo ./numix.sh
-```
-***
-Installing **Cairo Dock**
-```bash
-sudo ./cairo-dock.sh
-```
-***
-Installing **Kodi**
-```bash
-sudo ./kodi-add-repos.sh # run only once and only if this workaround is still necessary
-sudo ./kodi.sh
-```
-***
-Installing **DeaDBeeF** with **File Browser plugin**
-
-Before running the script:
-
- * Download debubuntu package file into files/deadbeef as deadbeef-static.deb
- * Extract ddb_misc_filebrowser_GTK2.so and ddb_misc_filebrowser_GTK3.so into files/deadbeef directory
- 
-```bash
-sudo ./deadbeef.sh
-```
-To activate file browser: View -> Design mode, Replace with.. -> Splitter (left and right), Insert... -> ...
-***
-Installing **XnViewMP**
-```bash
-sudo ./xnviewmp.sh
-```
-***
-Installing **KeePass2** (with xsel for proper copy/paste working)
-```bash
-sudo ./keepass2.sh
-```
-***
-Installing **Oracle JDK 8** and setting the environment variables for installed JDK
-```bash
-sudo ./oracle-java.sh
-```
-***
-Installing the newest version of **Docker**
-
-(*The user must re-log after the execution. The specified user doesn't have to use sudo for Docker commands.*)
-```bash
-sudo ./docker.sh $USERNAME
-```
-Changing path for the root of the Docker runtime
-
-(*The default location is /var/lib/docker. Docker images are contained in this directory. Changing of the path can be convinient for example in case you don't have enough space on /var partition.*)
-```bash
-sudo ./docker-change-graph-path.sh $NEW_PATH
-```
-***
 Installing **Docker Compose** (formerly named Fig)
 ```bash
 mkdir files/fig
 wget https://github.com/docker/fig/releases/download/1.1.0-rc2/docker-compose-`uname -s`-`uname -m` -O ./files/fig/docker-compose
 sudo ./docker-compose.sh
 ```
-***
-Installing/Updating **IntelliJ IDEA Community Edition** and integrating with desktop (adding desktop menu item...)
+### DataGrip
+Install or update DataGrip and integrate with desktop (adding desktop menu item...)
 
-Before running the script:
-
-* Download IDEA archive as ideaIC.tar.gz into files/idea directory
-
-```bash
-sudo ./idea.sh
+Prerequisite: Download DataGrip archive as `datagrip.tar.gz` into `files/datagrip` directory
 ```
-***
-Installing/Updating **0xDBE EAP** and integrating with desktop (adding desktop menu item...)
-
-Before running the script:
-
-* Download 0xDBE archive as 0xdbe.tar.gz into files/0xdbe directory
-
-```bash
-sudo ./0xdbe.sh
+# ./datagrip
+```
+## Other application
+### KeePass2
+```
+# apt-get install keepass2
+# apt-get install xdotool
+```
+### FlashPlayer
+Install
+```
+# apt-get install flashplugin-nonfree
+```
+Update
+```
+# update-flashplugin-nonfree --install
 ```

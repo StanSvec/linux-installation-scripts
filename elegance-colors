@@ -1,7 +1,0 @@
-#!/bin/bash
-apt-get install libglib2.0-dev libgtk-3-dev valac imagemagick
-git clone https://github.com/satya164/elegance-colors.git elegance-color-dir
-cd elegance-color-dir
-make install
-cd ..
-rm elegance-color-dir -rf
