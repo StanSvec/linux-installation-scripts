@@ -21,8 +21,13 @@ Prerequisite: Git is installed
 ```
 ### Arc Theme
 [Git repo](https://github.com/horst3180/arc-theme)
+#### Preparation (run only for the first time)
 ```
 sudo apt-get install autoconf; sudo apt-get install pkg-config; sudo apt-get install make; sudo apt-get install libgtk-3-dev; git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme; ./autogen.sh --prefix=/usr; sudo make install; cd..; rm -rf arc-theme
+```
+#### Installation / Update
+```
+git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme; ./autogen.sh --prefix=/usr; sudo make install; cd ..; rm -rf arc-theme
 ```
 ### Adapta Theme
 [Git repo](https://github.com/tista500/Adapta)
