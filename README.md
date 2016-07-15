@@ -7,9 +7,10 @@ $ su
 # adduser $YOUR_USER sudo
 ```
 Log out and log in
+
+**Note: Some of the scripts or commands may be executed only from the root (repository) directory.**
 ***
-**Note: The scripts must be run from the root repository directory (not required for all scripts).**
-## Gnome customization
+## 1. Gnome customization
 ### Display date in Gnome Shell panel
 ```
 $ gsettings set org.gnome.desktop.interface clock-show-date true
@@ -34,13 +35,13 @@ git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme; ./au
 ```
 sudo apt-get install autoconf; sudo apt-get install pkg-config; sudo apt-get install make; git clone https://github.com/tista500/Adapta.git; cd Adapta; ./autogen.sh; make; sudo make install; cd ..; rm -rf Adapta
 ```
-## Development tools
+## 2. Development tools
 ### Git
 ```
 # apt-get install git
 ```
 ### Docker (Stretch/Sid versions only)
-(*The user must re-log after the execution. The specified user doesn't have to use sudo for Docker commands.*)
+(*The user must re-log after the execution. The specified user doesn't need to use sudo for Docker commands then.*)
 ```bash
 sudo ./docker $USERNAME
 ```
@@ -49,7 +50,13 @@ The default location is `/var/lib/docker`. Docker images are downloaded to this 
 ```
 sudo ./docker-change-graph-path $NEW_PATH
 ```
-### **Oracle JDK 8**
+#### Docker Compose (formerly named Fig)
+```bash
+mkdir files/fig
+wget https://github.com/docker/fig/releases/download/1.1.0-rc2/docker-compose-`uname -s`-`uname -m` -O ./files/fig/docker-compose
+sudo ./docker-compose.sh
+```
+### Oracle JDK 8
 ```
 # ./oracle-java
 ```
@@ -64,12 +71,6 @@ Install Sublime Text 3
 ```bash
 sudo ./sublime-text-3
 ```
-Installing **Docker Compose** (formerly named Fig)
-```bash
-mkdir files/fig
-wget https://github.com/docker/fig/releases/download/1.1.0-rc2/docker-compose-`uname -s`-`uname -m` -O ./files/fig/docker-compose
-sudo ./docker-compose.sh
-```
 ### DataGrip
 Install or update DataGrip and integrate with desktop (adding desktop menu item...)
 
@@ -77,7 +78,7 @@ Prerequisite: Download DataGrip archive as `datagrip.tar.gz` into `files/datagri
 ```
 # ./datagrip
 ```
-## Other application
+## 3. Miscellaneous
 ### KeePass2
 ```
 # apt-get install keepass2
@@ -92,3 +93,9 @@ Update
 ```
 # update-flashplugin-nonfree --install
 ```
+### Certificates for Viber
+This fixes `No Connection` issue:
+```
+# ./viber-certs
+```
+Choose Ask - then select `mozilla/thawte_Premium_Server_CA.crt`

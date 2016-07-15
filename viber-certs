@@ -1,0 +1,6 @@
+#!/bin/bash
+
+FILES=files
+
+cp -u -p $FILES/viber-certs/thawte_Premium_Server_CA.crt /usr/share/ca-certificates/mozilla
+dpkg-reconfigure ca-certificates
