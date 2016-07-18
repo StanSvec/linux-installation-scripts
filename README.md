@@ -8,7 +8,7 @@ $ su
 ```
 Log out and log in
 
-**Note: Some of the scripts or commands may be executed only from the root (repository) directory.**
+**Note: Some of the scripts or commands must be executed from the root (repository) directory.**
 ***
 ## 1. Gnome customization
 ### Display date in Gnome Shell panel
@@ -41,12 +41,12 @@ sudo apt-get install autoconf; sudo apt-get install pkg-config; sudo apt-get ins
 # apt-get install git
 ```
 ### Docker (Stretch/Sid versions only)
-(*The user must re-log after the execution. The specified user doesn't need to use sudo for Docker commands then.*)
+(*The user must re-log after the execution. The specified user doesn't need root privileges when execute Docker commands.*)
 ```bash
 sudo ./docker $USERNAME
 ```
 #### Changing root path for the Docker runtime (needs review!)
-The default location is `/var/lib/docker`. Docker images are downloaded to this directory. Changing of the path can be convinient for example in case you don't have enough space on /var partition.
+The default location is `/var/lib/docker`. Docker images are downloaded into this directory. Changing of the path can be convinient for example in case you don't have enough space on /var partition.
 ```
 sudo ./docker-change-graph-path $NEW_PATH
 ```
@@ -67,10 +67,6 @@ Prerequisite: Download IDEA archive as `ideaIC.tar.gz` into `files/idea` directo
 ```
 # ./idea
 ```
-Install Sublime Text 3
-```bash
-sudo ./sublime-text-3
-```
 ### DataGrip
 Install or update DataGrip and integrate with desktop (adding desktop menu item...)
 
@@ -78,6 +74,11 @@ Prerequisite: Download DataGrip archive as `datagrip.tar.gz` into `files/datagri
 ```
 # ./datagrip
 ```
+### Install Sublime Text 3
+```bash
+sudo ./sublime-text-3
+```
+
 ## 3. Miscellaneous
 ### KeePass2
 ```
