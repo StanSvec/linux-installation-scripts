@@ -50,7 +50,8 @@ The default location is `/var/lib/docker`. Docker images are downloaded into thi
 ```
 # ./docker-change-graph-path $NEW_PATH
 ```
-#### Docker Compose (formerly named Fig)
+### Docker Compose (formerly named Fig)
+Install or Update (current version 1.8)
 ```bash
 # ./docker-compose
 ```
