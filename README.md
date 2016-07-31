@@ -43,18 +43,16 @@ sudo apt-get install autoconf; sudo apt-get install pkg-config; sudo apt-get ins
 ### Docker (Stretch/Sid versions only)
 (*The user must re-log after the execution. The specified user doesn't need root privileges when execute Docker commands.*)
 ```bash
-sudo ./docker $USERNAME
+# ./docker $USERNAME
 ```
-#### Changing root path for the Docker runtime (needs review!)
+#### Changing root path for the Docker runtime (outdated - may need review)
 The default location is `/var/lib/docker`. Docker images are downloaded into this directory. Changing of the path can be convinient for example in case you don't have enough space on /var partition.
 ```
-sudo ./docker-change-graph-path $NEW_PATH
+# ./docker-change-graph-path $NEW_PATH
 ```
 #### Docker Compose (formerly named Fig)
 ```bash
-mkdir files/fig
-wget https://github.com/docker/fig/releases/download/1.1.0-rc2/docker-compose-`uname -s`-`uname -m` -O ./files/fig/docker-compose
-sudo ./docker-compose.sh
+# ./docker-compose
 ```
 ### Oracle JDK 8
 ```
@@ -76,7 +74,7 @@ Prerequisite: Download DataGrip archive as `datagrip.tar.gz` into `files/datagri
 ```
 ### Install Sublime Text 3
 ```bash
-sudo ./sublime-text-3
+# ./sublime-text-3
 ```
 
 ## 3. Miscellaneous
