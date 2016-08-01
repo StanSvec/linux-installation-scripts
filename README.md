@@ -73,6 +73,11 @@ Prerequisite: Download DataGrip archive as `datagrip.tar.gz` into `files/datagri
 ```
 # ./datagrip
 ```
+### SDKMAN + Zsh Fix
+To add SDKMAN's entries to PATH insert this line into `~/.zshrc`:
+```bash
+[[ -s ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
+```
 ### Install Sublime Text 3
 ```bash
 # ./sublime-text-3
