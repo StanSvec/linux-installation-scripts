@@ -30,11 +30,10 @@ sudo apt-get install autoconf; sudo apt-get install pkg-config; sudo apt-get ins
 ```
 git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme; ./autogen.sh --prefix=/usr; sudo make install; cd ..; rm -rf arc-theme
 ```
-### Adapta Theme
-[Git repo](https://github.com/tista500/Adapta)
-```
-sudo apt-get install autoconf; sudo apt-get install pkg-config; sudo apt-get install make; git clone https://github.com/tista500/Adapta.git; cd Adapta; ./autogen.sh; make; sudo make install; cd ..; rm -rf Adapta
-```
+### Another interesting themes
+[Adapta](https://github.com/tista500/Adapta)
+[Flat-Pat (own Unlock screen)](https://github.com/nana-4/Flat-Plat)
+[Papirus Icons](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
 ## 2. Development tools
 ### Git
 ```
