@@ -85,6 +85,8 @@ To add SDKMAN's entries to PATH insert this line into `~/.zshrc`:
 ```
 
 ## 3. Miscellaneous
+### Firefox
+[Debian Mozilla Repositories](https://mozilla.debian.net/)
 ### KeePass2
 ```
 # apt-get install keepass2
