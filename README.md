@@ -32,7 +32,9 @@ git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme; ./au
 ```
 ### Another interesting themes
 [Adapta](https://github.com/tista500/Adapta)
+
 [Flat-Pat (own Unlock screen)](https://github.com/nana-4/Flat-Plat)
+
 [Papirus Icons](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
 ## 2. Development tools
 ### Git
