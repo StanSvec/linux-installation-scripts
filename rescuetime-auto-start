@@ -1,0 +1,5 @@
+#!/bin/bash
+
+FILES=files
+
+cp -u -p $FILES/rescuetime/rescuetime.desktop ~/.config/autostart

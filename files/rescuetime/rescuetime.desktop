@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=rescuetime
+GenericName=Rescue Time
+Comment=Start these up at login
+Exec=rescuetime
+Terminal=False
+Type=Application
+X-GNOME-Autostart-enabled=true
